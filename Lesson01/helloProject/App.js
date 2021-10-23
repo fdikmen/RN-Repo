@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text,StyleSheet, Button } from 'react-native';
+import StatesComp from './src/components/statesComp'
 
 export default class App extends Component {
   
@@ -7,6 +8,7 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
      <Text>Main</Text>
+      <StatesComp/>
       </View>
     );
   }
