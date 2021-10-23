@@ -1,21 +1,31 @@
 import React, { Component } from 'react';
-import { View, Text,StyleSheet, Button } from 'react-native';
+import { View, Text,StyleSheet, Button, SafeAreaView } from 'react-native';
 import StatesComp from './src/components/statesComp'
+import ImageComp from './src/components/imageComp'
+import TouchSample from './src/components/touchSample';
+import TextInputSample from './src/components/textInputSample';
+import ScrollView from './src/components/scrollView';
+import DimensionsSample from './src/components/dimensionsSample';
 
 export default class App extends Component {
   
   render() {
     return (
-      <View style={styles.container}>
-     <Text>Main</Text>
-      <StatesComp/>
-      </View>
+      <SafeAreaView style={styles.container}>
+        <Text>Main</Text>
+        {/* <StatesComp/> */}
+        {/* <ImageComp/> */}
+        {/* <TouchSample /> */}
+        {/* <TextInputSample/> */}
+        {/* <ScrollView/> */}
+        <DimensionsSample/>
+      </SafeAreaView>
     );
   }
   }
 const styles = StyleSheet.create({
   container: {
-      paddingTop: 50,
+      // paddingTop: 50,
       fontSize: 18,
       fontWeight: '400',
       backgroundColor: '#FFEBCB',
