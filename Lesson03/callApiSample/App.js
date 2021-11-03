@@ -8,8 +8,8 @@ export default class App extends Component {
   render() {
     return (
       <SafeAreaView>
-        {/* <Persons/> */}
-        <AxiosSample/>
+        <Persons/>
+        {/* <AxiosSample/> */}
       </SafeAreaView>
     )
   }
