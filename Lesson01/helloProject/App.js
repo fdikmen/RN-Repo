@@ -6,7 +6,8 @@ import TouchSample from './src/components/touchSample';
 import TextInputSample from './src/components/textInputSample';
 import ScrollView from './src/components/scrollView';
 import DimensionsSample from './src/components/dimensionsSample';
-
+import FlatListComp from './src/components/FlatListComp';
+import PlatformSample from './src/components/PlatformSample';
 export default class App extends Component {
   
   render() {
@@ -18,7 +19,9 @@ export default class App extends Component {
         {/* <TouchSample /> */}
         {/* <TextInputSample/> */}
         {/* <ScrollView/> */}
-        <DimensionsSample/>
+        {/* <DimensionsSample/> */}
+        {/* <FlatListComp/> */}
+        <PlatformSample/>
       </SafeAreaView>
     );
   }
