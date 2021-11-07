@@ -67,3 +67,24 @@ npx react-native init callApiSample
 - 031121.11. Infinite Scroll (onEndReached & onEndReachedThreshold)
 - 031121.12. Bug Fixed Infinite Scroll Searching
 - 031121.13. Pull to Refresh (onRefresh Refreshing)
+
+#### LESSON 07
+- 06112021.01. React Navigation
+npm install @react-navigation/native
+npm install react-native-screens react-native-safe-area-context
+if using IOS;
+npx pod-install ios
+- 06112021.02. React Navigation & Navigation Types
+Drawer + Tab + Stack = NESTING
+- 06112021.03. Installing the Native-Stack-Navigator Lib
+npm install @react-navigation/native-stack
+- 06112021.04. Create a Stack-Navigator
+- 06112021.05. Bug Fixed & Configuring The Navigator
+- 06112021.06. Specifying Options (Options & screenOptions)
+- 06112021.07. Passing Props
+- 06112021.08. Moving Between Screens (navigation.navigate)
+- 06112021.09. Navigate to a route many times (navigation.push)
+- 06112021.10. Going Back (goBack & popToTop)
+- 06112021.11. Passing Parameters to Route
+- 06112021.12. Updating Params (setParams & setOptions)
+- 06112021.13. Initial Params (Set default value) - initialParams
