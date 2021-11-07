@@ -50,3 +50,20 @@ Contains React Native Course Codes.
 - 271021.09. KeyboardAvoidingView
 - 271021.10. Button Component
 - 271021.11. Sign Up Field
+
+#### LESSON 06
+
+- 031121.01. Create App
+npx react-native init callApiSample
+- 031121.02. Call API
+- 031121.03. Loading
+- 031121.04. Refresh Call API with Button
+- 031121.05. Async-Await on call API
+- 031121.06. View API Data on FlatList
+- 031121.07. Loading with ActivityIndicator on FlatList
+- 031121.08. Loading with ActivityIndicator on FlatList-2
+- 031121.09. Bug Fixed for Filter
+- 031121.10. Bug Fixed for Filter-2
+- 031121.11. Infinite Scroll (onEndReached & onEndReachedThreshold)
+- 031121.12. Bug Fixed Infinite Scroll Searching
+- 031121.13. Pull to Refresh (onRefresh Refreshing)
