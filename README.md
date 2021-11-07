@@ -53,7 +53,7 @@ Contains React Native Course Codes.
 
 #### LESSON 06
 
-- 031121.01. Create App
+- 031121.01. Create App<br/>
 npx react-native init callApiSample
 - 031121.02. Call API
 - 031121.03. Loading
@@ -69,14 +69,13 @@ npx react-native init callApiSample
 - 031121.13. Pull to Refresh (onRefresh Refreshing)
 
 #### LESSON 07
-- 06112021.01. React Navigation
-npm install @react-navigation/native
-npm install react-native-screens react-native-safe-area-context
-if using IOS;
-npx pod-install ios
-- 06112021.02. React Navigation & Navigation Types
+- 06112021.01. React Navigation<br/>
+npm install @react-navigation/native<br/>
+npm install react-native-screens react-native-safe-area-context<br/>
+###### if using IOS; npx pod-install ios<br/>
+- 06112021.02. React Navigation & Navigation Types<br/>
 Drawer + Tab + Stack = NESTING
-- 06112021.03. Installing the Native-Stack-Navigator Lib
+- 06112021.03. Installing the Native-Stack-Navigator Lib<br/>
 npm install @react-navigation/native-stack
 - 06112021.04. Create a Stack-Navigator
 - 06112021.05. Bug Fixed & Configuring The Navigator
