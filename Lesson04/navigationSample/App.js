@@ -1,15 +1,21 @@
 import React from 'react'
-import { StyleSheet, Text, View, SafeAreaView, Button } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView, Button, TextInput } from 'react-native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { NavigationContainer } from '@react-navigation/native';
 
 
-function HomeScreen({ navigation }) {
+function HomeScreen({ navigation,route }) {
   return (
     <SafeAreaView style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Home Screen</Text>
       <Button title="Go to Details"
         onPress={() => navigation.navigate('Details',{itemId:11,name:'Tommy'})} />
+    <Button title="Write new Message"
+    onPress={()=>{navigation.navigate('CreatePost')}}/>    
+    <Text style={{margin:15}}>{route.params?.post}</Text>
+
+    <Button title="Go To Profile"
+    onPress={()=>{navigation.navigate('Profile',{name:'Custom Title TEST'})}}/>
     </SafeAreaView>
   )
 }
@@ -30,10 +36,9 @@ function DetailsScreen({ navigation,route }) {
     </SafeAreaView>
   )
 }
-
-function ProfileScreen({navigation:{setParams,setOptions},route}) {
+function ProfileScreen({navigation}) {
   return (
-    <Button
+    /*<Button
     title='Swap title and name'
     onPress={
       ()=> setParams({
@@ -41,16 +46,37 @@ function ProfileScreen({navigation:{setParams,setOptions},route}) {
         title:route.params.title === 'Tommy' ? "Tommy Profile" : "Other Profile" 
       })
     }
-    />
+    />*/
+    <View>
+      <Text>Profile Screen</Text>
+      <Button title="Go Back" onPress={()=>{navigation.goBack()}}/>
+    </View>
   )
 }
-
+function CreatePostScreen({navigation,route}) {
+  const [postText,setPostText] = React.useState('');
+  return (
+    <View >
+      <TextInput multiline
+      placeholder="Write message..."
+      style={{height:300,padding: 15,backgroundColor:'white'}}
+      value={postText}
+      onChangeText={setPostText}
+      />
+      <Button title="Send Message"
+      onPress={()=>{
+        navigation.navigate({name:'Home',params:{post:postText}})
+      }}
+      />
+    </View>
+  )
+}
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home" screenOptions={{ headerStyle: { backgroundColor: 'red', color: 'white' } }}>
+      <Stack.Navigator initialRouteName="Home" screenOptions={{ headerStyle: { backgroundColor: 'red' } }}>
         <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Home Title' }} />
         <Stack.Screen name="Details" component={DetailsScreen} initialParams={{bookName:'First'}}/>
         {/* <Stack.Screen name="Details" component={()=><DetailsScreen/>}/> */}
@@ -58,6 +84,10 @@ export default function App() {
      <Stack.Screen name="Home">
        {props=> <HomeScreen {...props} newData={12}/>}
      </Stack.Screen> */}
+     <Stack.Screen name="CreatePost" component={CreatePostScreen} options={{title:'New Message'}}/>
+     <Stack.Screen name="Profile" component={ProfileScreen}
+     options={({route})=>({title:route.params.name})}/>
+      
       </Stack.Navigator>
     </NavigationContainer>
   )
