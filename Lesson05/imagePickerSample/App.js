@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, SafeAreaView } from 'react-native'
+import { Text, StyleSheet, View, SafeAreaView } from 'react-native'
+
 
 export default class App extends Component {
   render() {

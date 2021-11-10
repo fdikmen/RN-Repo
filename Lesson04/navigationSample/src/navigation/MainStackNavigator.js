@@ -19,7 +19,7 @@ export default function MainStackNavigator() {
             screenOptions={{
                 headerStyle: { backgroundColor: 'red' },
                 headerTintColor: '#FFF', headerTitleStyle: { fontWeight: 'bold' },
-                headerRight: () => (<Button title="Info" color="#FFF" onPress={() => { alert("Info !!!") }} />)
+                /*headerRight: () => (<Button title="Info" color="#FFF" onPress={() => { alert("Info !!!") }} />)*/
             }}>
 
             <Stack.Screen name="Home" component={HomeScreen}

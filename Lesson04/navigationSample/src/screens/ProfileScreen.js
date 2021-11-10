@@ -1,6 +1,16 @@
 import React from 'react'
 import { View, Text, Button } from 'react-native'
 export default function ProfileScreen({ navigation }) {
+  const [count, setCount] = React.useState(0)
+  React.useLayoutEffect(() => {
+    navigation.setOptions(
+      {
+        headerRight:()=>{
+          <Button onPress={()=>setCount((c)=>c+1)} title="Update"/>
+        }
+      }
+    )
+  }, [navigation,count])
   return (
     <View>
       <Text>Profile Screen</Text>

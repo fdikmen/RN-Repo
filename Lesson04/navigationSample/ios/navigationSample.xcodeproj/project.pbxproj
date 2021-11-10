@@ -11,6 +11,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		4A6D00FDF9F248ABBE429328 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91C571D0E5E24E83BAB467F2 /* Ionicons.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		B593EDF5DF43F316E5627C0D /* libPods-navigationSample-navigationSampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD96CBEFC318842E8F26D28 /* libPods-navigationSample-navigationSampleTests.a */; };
 		BD42DA1857521043FD163137 /* libPods-navigationSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C95FCA1C886E6442892D017 /* libPods-navigationSample.a */; };
@@ -41,6 +42,7 @@
 		2DB51C76B693DD272C7B2801 /* Pods-navigationSample-navigationSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-navigationSample-navigationSampleTests.release.xcconfig"; path = "Target Support Files/Pods-navigationSample-navigationSampleTests/Pods-navigationSample-navigationSampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = navigationSample/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F15FB8D9805FB11E45B050F /* Pods-navigationSample-navigationSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-navigationSample-navigationSampleTests.debug.xcconfig"; path = "Target Support Files/Pods-navigationSample-navigationSampleTests/Pods-navigationSample-navigationSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		91C571D0E5E24E83BAB467F2 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-ionicons/fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		9C95FCA1C886E6442892D017 /* libPods-navigationSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-navigationSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCD96CBEFC318842E8F26D28 /* libPods-navigationSample-navigationSampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-navigationSample-navigationSampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -96,6 +98,15 @@
 			name = navigationSample;
 			sourceTree = "<group>";
 		};
+		2B6F2CFF8F2C40059DE74EEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				91C571D0E5E24E83BAB467F2 /* Ionicons.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +133,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				DE31F15F3850DBA0AF352E41 /* Pods */,
+				2B6F2CFF8F2C40059DE74EEA /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -245,6 +257,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				4A6D00FDF9F248ABBE429328 /* Ionicons.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

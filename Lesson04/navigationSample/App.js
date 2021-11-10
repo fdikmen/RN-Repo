@@ -3,12 +3,18 @@ import { StyleSheet } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 
 import MainStackNavigator from './src/navigation/MainStackNavigator';
+import TabNavSample from './src/components/TabNavSample';
+import DrawerNavSample from './src/components/DrawerNavSample';
+
 
 export default function App() {
   return (
     <NavigationContainer>
-      <MainStackNavigator />
+      {/* <MainStackNavigator /> */}
+      {/* <TabNavSample/> */}
+      <DrawerNavSample/>
     </NavigationContainer>
+    
   )
 }
 
