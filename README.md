@@ -87,3 +87,17 @@ npm install @react-navigation/native-stack
 - 06112021.11. Passing Parameters to Route
 - 06112021.12. Updating Params (setParams & setOptions)
 - 06112021.13. Initial Params (Set default value) - initialParams
+
+#### LESSON 08
+- 07.11.2021.01. Summary
+- 07.11.2021.02. Passing params to previous screen
+- 07.11.2021.03. What should be in params
+- 07.11.2021.04. Configure the Header - Set Title
+- 07.11.2021.05. Configure the Header - Using Params in Title
+- 07.11.2021.06. Configure the Header - Updating options with setOptions()
+- 07.11.2021.07. Configure the Header - Adjusting header styles<br/>
+headerStyle , headerTintColor, headerTitleStyle
+- 07.11.2021.08. Configure the Header - Sharing Common options across all screen
+- 07.11.2021.09. Configure the Header - Replacing the title with a custom component (headerTitle)
+- 07.11.2021.10. Header Buttons - Adding a button to the header
+- 07.11.2021.11. Folder structure for Navigator
