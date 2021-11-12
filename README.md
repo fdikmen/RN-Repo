@@ -127,5 +127,5 @@ headerBackTitleStyle headerBackImageSource / headerLeft
 - 12112021.08. Write Capture Photo Func From Camera
 - 12112021.09. Write Choose File Func From Device Library/Gallery
 - 12112021.10. Create Components
-- 12112021.11. Bug Fixed
+- 12112021.11. Bug Fixed && Summary this Lesson
 - 12112021.12. Improve Code
