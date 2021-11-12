@@ -26,7 +26,7 @@ const requestCameraPermisson = async () => {
             return false;
         }
     }
-    else return false;
+    else return true;
 }
 //Control for android ExternalWrite permisson
 const requestExternalWritePermisson = async () => {
@@ -44,7 +44,7 @@ const requestExternalWritePermisson = async () => {
             return false;
         }
     }
-    else return false;
+    else return true;
 }
 //Capture Photo From Camera:::launchCamera
 const captureImage = async(type)=>{
@@ -59,7 +59,7 @@ const captureImage = async(type)=>{
     }
     let isCameraPermitted = await requestCameraPermisson();
     let isStoragePermitted = await requestExternalWritePermisson();
-    if (Platform.OS==='ios' || (isCameraPermitted && isStoragePermitted)) {
+    if ((isCameraPermitted && isStoragePermitted)) {
         
         launchCamera(options, (response)=>{
             console.log("launchCamera Response =",response)
