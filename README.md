@@ -101,3 +101,17 @@ headerStyle , headerTintColor, headerTitleStyle
 - 07.11.2021.09. Configure the Header - Replacing the title with a custom component (headerTitle)
 - 07.11.2021.10. Header Buttons - Adding a button to the header
 - 07.11.2021.11. Folder structure for Navigator
+
+#### LESSON 09
+- 10112021.01. Summary
+- 10112021.02. Header interaction with its screen component
+- 10112021.03. useEffect vs useLayoutEffect
+- 10112021.04. Customizing the Back Button<BR/>
+headerBackTitleStyle headerBackImageSource / headerLeft
+- 10112021.05. Tab Navigation
+- 10112021.06. Customizing the Appearance
+- 10112021.07. Add badge icon to tab menu
+- 10112021.08. Jumping between tabs
+- 10112021.09. Drawer Navigation
+- 10112021.10. open/close/toggle Drawer & get drawer status
+- 10112021.11. BUG FIXED
