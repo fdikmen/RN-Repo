@@ -3,7 +3,7 @@ const app = express();
 const port = 3001;
 
 const multer  = require('multer');
-
+//MULTER:::dosya yüklemek için kullanılan “multipart/form-data” yı yönetmek için bir node.js middleware idir.
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, './uploads')
