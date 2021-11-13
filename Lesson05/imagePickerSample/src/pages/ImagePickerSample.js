@@ -1,10 +1,12 @@
 import axios from 'axios';
 import React,{useState} from 'react'
-import { StyleSheet, Text, TouchableOpacity, View,Platform,PermissionsAndroid,Image } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View,Platform,PermissionsAndroid,Image, ActivityIndicator } from 'react-native'
 import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 
 export default function ImagePickerSample() {
     const [filePath, setFilePath] = useState({})
+    const [loading,setLoading] = useState(false)
+    const [error,setError] = useState(false)
     //Custom Button Component
 const AppButton=({onPress,title})=> (
     <TouchableOpacity onPress={onPress} activeOpacity={0.5} style={styles.appButtonContainer}>
@@ -124,25 +126,37 @@ const chooseFile = (type)=>{
 }
 //Upload Image to WebService
 uploadImageToApi=response=>{
+    setLoading(true);
+    setError(false);
     axios.post('https://605641c2055dbd0017e83e2c.mockapi.io/Upload',
     {uri:response.uri,type:response.type,name:response.fileName})
-        .then(result =>{alert(result.data.id + "-" + result.data.type)})
-        .catch(error=>{alert(error)})
+        .then(result =>{alert(result.data.id + "-" + result.data.type);setLoading(false);})
+        .catch(error=>{alert(error);setLoading(false);setError(true);})
 }
 
 uploadImageToLocal=response=>{
+    setLoading(true);
+    setError(false);
     const data = new FormData();
     data.append('fileData',{uri:response.uri,type:response.type,name:response.fileName})
     //FormData Methods: append-delete-entries-get-getAll-has-keys-set-values
     const config = {headers:{'Accept':'application/json','Content-type':'multipart/form-data'}}
-    axios.post('http://localhost:3001/upload',data,config)
-        .then(result =>{console.log(result)})
-        .catch(error=>{alert(error)})
+    /*axios.post('http://localhost:3001/upload',data,config)
+        .then(result =>{console.log(result);setLoading(false);})
+        .catch(error=>{alert(error);setLoading(false);setError(true);})*/
+        try {
+            const requestApi = axios.post('http://localhost:3001/upload',data,config);
+            /*console.log(requestApi);*/ setLoading(false);
+        } catch (err) {
+            setLoading(false);setError(true);
+        }
 }
     return (
         <View style={styles.container}>
             <View style={styles.containerImage}>
             <Image source={{uri:filePath.uri}} style={styles.avatar}/>
+            {loading && <ActivityIndicator size={'small'}/>}
+            {error && <Text style={{textAlign:'center'}}>An error occurred while uploading.</Text>}
             </View>
             <Text>Path:{filePath.uri}</Text>
             <AppButton onPress={()=> uploadImageToApi(filePath)} title="Upload to API"></AppButton>
