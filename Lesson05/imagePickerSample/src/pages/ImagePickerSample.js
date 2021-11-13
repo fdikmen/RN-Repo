@@ -1,14 +1,13 @@
+import axios from 'axios';
 import React,{useState} from 'react'
 import { StyleSheet, Text, TouchableOpacity, View,Platform,PermissionsAndroid,Image } from 'react-native'
 import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
-
-
 
 export default function ImagePickerSample() {
     const [filePath, setFilePath] = useState({})
     //Custom Button Component
 const AppButton=({onPress,title})=> (
-    <TouchableOpacity onPress={onPress} style={styles.appButtonContainer}>
+    <TouchableOpacity onPress={onPress} activeOpacity={0.5} style={styles.appButtonContainer}>
         <Text style={styles.appButtonText}>{title}</Text>
     </TouchableOpacity>
 )
@@ -46,7 +45,7 @@ const requestExternalWritePermisson = async () => {
     }
     else return true;
 }
-//Capture Photo From Camera:::launchCamera
+//Capture Photo From Camera:::launchCamera(options?,callbackFunction)
 const captureImage = async(type)=>{
     let options = {
         mediaType:type,
@@ -62,7 +61,7 @@ const captureImage = async(type)=>{
     if ((isCameraPermitted && isStoragePermitted)) {
         
         launchCamera(options, (response)=>{
-            console.log("launchCamera Response =",response)
+            //console.log("launchCamera Response =",response)
             if (response.didCancel) {
                 alert('User cancelled camera picker');
                 return;
@@ -86,17 +85,17 @@ const captureImage = async(type)=>{
             console.log('fileSize ->',response.fileSize );
             console.log('type ->',response.type);
             console.log('fileName ->',response.fileName);            
-            setFilePath(response)
+            setFilePath(response)//set to filePath state
         });
  
        
     }
 }
-//Choose File From Device:::launchImageLibrary
+//Choose File From Device:::launchImageLibrary(options?,callbackFunction)
 const chooseFile = (type)=>{
     let options={mediaType:type,maxWidth:300,maxHeight:500,quality:1}
     launchImageLibrary(options,(response)=>{
-        console.log("Response=",response);
+        //console.log("Response=",response);
         if (response.didCancel) {
             alert('User cancelled camera picker');
             return;
@@ -120,13 +119,34 @@ const chooseFile = (type)=>{
             console.log('fileSize ->',response.fileSize );
             console.log('type ->',response.type);
             console.log('fileName ->',response.fileName);            
-            setFilePath(response)
+            setFilePath(response)//set to filePath state
     })
+}
+//Upload Image to WebService
+uploadImageToApi=response=>{
+    axios.post('https://605641c2055dbd0017e83e2c.mockapi.io/Upload',
+    {uri:response.uri,type:response.type,name:response.fileName})
+        .then(result =>{alert(result.data.id + "-" + result.data.type)})
+        .catch(error=>{alert(error)})
+}
+
+uploadImageToLocal=response=>{
+    const data = new FormData();
+    data.append('fileData',{uri:response.uri,type:response.type,name:response.fileName})
+    //FormData Methods: append-delete-entries-get-getAll-has-keys-set-values
+    const config = {headers:{'Accept':'application/json','Content-type':'multipart/form-data'}}
+    axios.post('http://localhost:3001/upload',data,config)
+        .then(result =>{console.log(result)})
+        .catch(error=>{alert(error)})
 }
     return (
         <View style={styles.container}>
-            <Image source={{uri:filePath.uri}} style={styles.containerImage}/>
+            <View style={styles.containerImage}>
+            <Image source={{uri:filePath.uri}} style={styles.avatar}/>
+            </View>
             <Text>Path:{filePath.uri}</Text>
+            <AppButton onPress={()=> uploadImageToApi(filePath)} title="Upload to API"></AppButton>
+            <AppButton onPress={()=> uploadImageToLocal(filePath)} title="Upload to Local"></AppButton>
             <AppButton onPress={()=> captureImage('photo')} title="Launch Camera For Image"></AppButton>
             <AppButton onPress={()=> captureImage('video')} title="Launch Camera For Video"></AppButton>
             <AppButton onPress={()=> chooseFile('photo')} title="Choose Image"></AppButton>
@@ -139,5 +159,6 @@ const styles = StyleSheet.create({
 container:{flex:1,padding:10,alignItems:'center'},
 appButtonContainer:{width:250,height:50,marginTop:15,backgroundColor:'#09aeae',padding: 15,borderRadius:50},
 appButtonText:{color:'white',fontSize:15,justifyContent:'center',textAlign:'center'},
-containerImage:{height:400,width:300,margin:5}
+containerImage:{height:300,width:300,margin:5,borderWidth:2,borderStyle:'dashed',borderColor:'#DDD',borderRadius:5},
+avatar:{height:300,width:300}
 })
