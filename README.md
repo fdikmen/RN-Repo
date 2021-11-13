@@ -115,3 +115,17 @@ headerBackTitleStyle headerBackImageSource / headerLeft
 - 10112021.09. Drawer Navigation
 - 10112021.10. open/close/toggle Drawer & get drawer status
 - 10112021.11. BUG FIXED
+
+#### LESSON 10
+- 12112021.01. Installation Image-Picker
+- 12112021.02. Set the Permissions
+- 12112021.03. Use RN-Image Picker Lib.
+- 12112021.04. Create Button Comp with style
+- 12112021.05. Permisson Control Method For Android
+- 12112021.06. Permisson Control Method For Android-V2
+- 12112021.07. Create state
+- 12112021.08. Write Capture Photo Func From Camera
+- 12112021.09. Write Choose File Func From Device Library/Gallery
+- 12112021.10. Create Components
+- 12112021.11. Bug Fixed && Summary this Lesson
+- 12112021.12. Improve Code
