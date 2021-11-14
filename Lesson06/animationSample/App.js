@@ -1,6 +1,7 @@
-import React,{useState} from 'react'
+import React from 'react'
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import FadeInView from './src/pages/FadeInView'
+import RotateView from './src/pages/RotateView'
 
 export default function App() {
 
@@ -11,12 +12,13 @@ export default function App() {
           <Text style={styles.fadeContainerText}>FADING IN</Text>      
         </FadeInView>
       </View>
+      <RotateView/>
     </SafeAreaView>
   )
 }
 
 const styles = StyleSheet.create({
-  container:{flex:1,alignItems:'center',justifyContent:'center',marginTop:40},
+  container:{flex:1,alignItems:'center',justifyContent:'center',marginTop:140},
   fadeContainer:{width:250,height:60,backgroundColor:'#bc477b'},
   fadeContainerText:{fontSize:30,textAlign:'center',margin:10,color:'white'}
 })
