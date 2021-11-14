@@ -140,3 +140,16 @@ headerBackTitleStyle headerBackImageSource / headerLeft
 - 13112021.07. Error Handling
 - 13112021.08. Animations -> AnimatedAPI & LayoutAnimationAPI
 - 13112021.09. AnimatedAPI -> Animated.createAnimatedComponent()
+
+
+#### LESSON 12
+
+- 14112021.01. Summary
+- 14112021.02. Animated Configuration & Animated Methods<br/>
+Animated.timing()  Animated.decay() Animated.spring()<br/>
+Animated.parallel() Animated.sequence() Animated.stagger()
+- 14112021.03. Animated.timing() <br/>
+(toValue-easing-duration-delay)
+- 14112021.04. Rotate Example with Timing
+- 14112021.05. Easing
+- 14112021.06. Interpolate
