@@ -129,3 +129,14 @@ headerBackTitleStyle headerBackImageSource / headerLeft
 - 12112021.10. Create Components
 - 12112021.11. Bug Fixed && Summary this Lesson
 - 12112021.12. Improve Code
+
+#### LESSON 11
+- 13112021.01. Summary
+- 13112021.02. Upload Image to API (WebService)
+- 13112021.03. Create Method for API Upload
+- 13112021.04. Image Upload To Local Server/NodeJS-Server
+- 13112021.05. Improving the Design
+- 13112021.06. Loading
+- 13112021.07. Error Handling
+- 13112021.08. Animations -> AnimatedAPI & LayoutAnimationAPI
+- 13112021.09. AnimatedAPI -> Animated.createAnimatedComponent()
