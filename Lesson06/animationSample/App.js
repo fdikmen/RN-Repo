@@ -1,6 +1,7 @@
 import React from 'react'
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import AnimatedParallelSample from './src/pages/AnimatedParallelSample'
+import AnimatedSequenceSample from './src/pages/AnimatedSequenceSample'
 import AnimatedSpringView from './src/pages/AnimatedSpringView'
 import EasingView from './src/pages/EasingView'
 import FadeInView from './src/pages/FadeInView'
@@ -20,7 +21,8 @@ export default function App() {
       {/* <EasingView/> */}
       {/* <Interpolate/> */}
       {/* <AnimatedSpringView/> */}
-      <AnimatedParallelSample/>
+      {/* <AnimatedParallelSample/> */}
+      <AnimatedSequenceSample/>
     </SafeAreaView>
   )
 }

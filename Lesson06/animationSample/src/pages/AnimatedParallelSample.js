@@ -12,14 +12,14 @@ export default function AnimatedParallelSample() {
         animationValue03.setValue(0)
 
         const makeAnimation = function (value, duration, easing, delay = 0) {
-            return Animated.timing(value, { toValue: 1, duration, easing, delay, useNativeDriver: false }).start()
+            return Animated.timing(value, { toValue: 1, duration, easing, delay, useNativeDriver: false })
         }
 
         Animated.parallel([
             makeAnimation(animationValue01, 2000, Easing.ease),
             makeAnimation(animationValue02, 1000, Easing.ease, 1000),
             makeAnimation(animationValue03, 1000, Easing.ease, 2000),
-        ])
+        ]).start()
     }
 
     const scaleText = animationValue01.interpolate({
