@@ -153,3 +153,15 @@ Animated.parallel() Animated.sequence() Animated.stagger()
 - 14112021.04. Rotate Example with Timing
 - 14112021.05. Easing
 - 14112021.06. Interpolate
+
+#### Lesson 13
+
+- 18112021.01. Summary
+- 18112021.02. Spring Method
+- 18112021.02. Spring Method (Codes)
+- 18112021.03. Animated.parallel()
+- 18112021.04. BUG-FIXED: Animated.parallel()
+- 18112021.05. Animated.sequence()
+- 18112021.06. Animated.stagger()
+- 18112021.07. LayoutAnimation API
+
