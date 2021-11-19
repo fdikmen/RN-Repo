@@ -165,3 +165,17 @@ Animated.parallel() Animated.sequence() Animated.stagger()
 - 18112021.07. Animated.stagger()
 - 18112021.08. LayoutAnimation API
 
+#### LESSON 14
+
+- 19112021.01. LayoutAnimation API
+- 19112021.02. First App - LayoutAnimation Sample01
+- 19112021.03. LayoutAnimation Methods
+##### configureNext
+static configureNext(config, onAnimationDidEnd?, onAnimationDidFail?)
+static configureNext({},func?,func?)
+##### create
+static create(duration, type, creationProp)
+- 19112021.04. Using Methods - LayoutAnimation Sample02
+- 19112021.05. Using default types - LayoutAnimation Sample03
+##### Spring , linear, easeInEaseOut
+
