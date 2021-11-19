@@ -6,6 +6,9 @@ import AnimatedSpringView from './src/pages/AnimatedSpringView'
 import EasingView from './src/pages/EasingView'
 import FadeInView from './src/pages/FadeInView'
 import Interpolate from './src/pages/Interpolate'
+import LayoutAnimationSample01 from './src/pages/LayoutAnimationSample01'
+import LayoutAnimationSample02 from './src/pages/LayoutAnimationSample02'
+import LayoutAnimationSample03 from './src/pages/LayoutAnimationSample03'
 import RotateView from './src/pages/RotateView'
 
 export default function App() {
@@ -22,7 +25,10 @@ export default function App() {
       {/* <Interpolate/> */}
       {/* <AnimatedSpringView/> */}
       {/* <AnimatedParallelSample/> */}
-      <AnimatedSequenceSample/>
+      {/* <AnimatedSequenceSample/> */}
+      {/* <LayoutAnimationSample01/> */}
+      {/* <LayoutAnimationSample02/> */}
+      <LayoutAnimationSample03/>
     </SafeAreaView>
   )
 }
