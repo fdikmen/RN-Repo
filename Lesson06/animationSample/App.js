@@ -3,6 +3,7 @@ import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import AnimatedParallelSample from './src/pages/AnimatedParallelSample'
 import AnimatedSequenceSample from './src/pages/AnimatedSequenceSample'
 import AnimatedSpringView from './src/pages/AnimatedSpringView'
+import DecayPanResponderView from './src/pages/DecayPanResponderView'
 import EasingView from './src/pages/EasingView'
 import FadeInView from './src/pages/FadeInView'
 import Interpolate from './src/pages/Interpolate'
@@ -28,7 +29,8 @@ export default function App() {
       {/* <AnimatedSequenceSample/> */}
       {/* <LayoutAnimationSample01/> */}
       {/* <LayoutAnimationSample02/> */}
-      <LayoutAnimationSample03/>
+      {/* <LayoutAnimationSample03/> */}
+      <DecayPanResponderView/>
     </SafeAreaView>
   )
 }
