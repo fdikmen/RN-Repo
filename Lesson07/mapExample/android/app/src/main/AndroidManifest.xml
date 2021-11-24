@@ -2,6 +2,10 @@
   package="com.mapexample">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Yaklaşık Konum-Daha Az Şarj Tüketir -->
+    <uses-permission android:name="android.permission.ACCESS_COURSE_LOCATION"/>
+     <!-- Tam Konum,Daha Fazla Şarj Tüketir -->
+     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
       android:name=".MainApplication"

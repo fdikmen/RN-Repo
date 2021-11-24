@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import MapView, { Marker } from 'react-native-maps';
 import AnimatedMarker from './AnimatedMarker';
+//import PERMISSIONS from 'react-native-permissions';
 
 export default function MarkerSample() {
     const coordTopkapi = {
@@ -10,7 +11,12 @@ export default function MarkerSample() {
         latitudeDelta: 0.01,
         longitudeDelta: 0.01,
     }
-
+// useEffect(() => {
+//     const perm= PERMISSIONS.request('location')
+//     if (perm !=='authorized') {
+//         alert("Please Check Permissons...")
+//     }
+// }, [])
     const markers = [
         {
             title: "Marker Title 01",
@@ -39,6 +45,7 @@ export default function MarkerSample() {
     ]
     return (
         <MapView
+        showsUserLocation={true}
         loadingEnabled={true}
         style={styles.map}        
         initialRegion={coordTopkapi}
