@@ -179,3 +179,16 @@ static create(duration, type, creationProp)
 - 19112021.05. Using default types - LayoutAnimation Sample03
 ##### Spring , linear, easeInEaseOut
 
+#### LESSON 15
+- 22112021.01. Introduction
+- 22112021.02. Use Native Driver
+- 22112021.03. Animated.Decay()
+- 22112021.04. useRef
+- 22112021.05. useRef vs useState
+- 22112021.06. Hook - .current
+- 22112021.07. Animated.event
+- 22112021.08. PanResponder
+- 22112021.09. PanResponder Create on Components
+- 22112021.10. PanResponder Default Methods
+- 22112021.11. gestureState
+- 22112021.12. Drag example with decay method
