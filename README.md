@@ -201,41 +201,53 @@ static create(duration, type, creationProp)
 
 
 #### LESSON 16
-
 - 24112021.01. Installation and Initial Example
-- 24112021.02. Google API Key
-http://console.cloud.google.com 
+- 24112021.02. Google API Key<br/>
+[Open Console] (http://console.cloud.google.com) 
 - 24112021.03. Open Google Services on Genymotion
 - 24112021.04. Configuration for IOS
-
+// in AppDelegate.m (/ios/[ProjectName]/AppDelegate.m)
+```swift
 #import <GoogleMaps/GoogleMaps.h>
+//in didFinishLaunchingWithOptions Function
 [GMSServices provideAPIKey:@"YOUR_API_KEY"];
-
-#React Native Maps dependencies rn_maps_path = '../node_modules/react-native-maps' pod 'react-native-google-maps', :path => rn_maps_path pod 'GoogleMaps' pod 'Google-Maps-iOS-Utils'
-
-
+```
+```swift
+// in Podfile (/ios/Podfile)
+# React Native Maps dependencies
+rn_maps_path = '../node_modules/react-native-maps'
+pod 'react-native-google-maps', :path => rn_maps_path
+pod 'GoogleMaps'
+pod 'Google-Maps-iOS-Utils'
+```swift
 - 24112021.05. Configuration for Android
-
+```kotlin
+// in build.gradle (/android/build.gradle)
 playServicesVersion = "18.0.0"
-
-<meta-data     android:name="com.google.android.geo.API_KEY"     android:value="YOUR_API_KEY"/> <uses-library android:name="org.apache.http.legacy" android:required="false"/>
-
-- 24112021.06. initialRegion - Region
-
+```
+```kotlin
+// in AndroidManifest (/android/app/src/main/AndroidManifest.xml)
+...
+<meta-data
+    android:name="com.google.android.geo.API_KEY"
+    android:value="YOUR_API_KEY"/>
+<uses-library android:name="org.apache.http.legacy" android:required="false"/>
+    </application>
+```
+- 24112021.06. InitialRegion - Region
 - 24112021.07. Region Sample
 - 24112021.08. Zoom on Emulator 
 - 24112021.09. Loading
 - 24112021.10. Markers
-- 24112021.11.  Displaying Multiple Markers
-- 24112021.12.  Custom Marker Icon
-- 24112021.13.  Using View in Marker
-- 24112021.14.  Using Comp. in Marker (Animated Marker)
+- 24112021.11. Displaying Multiple Markers
+- 24112021.12. Custom Marker Icon
+- 24112021.13. Using View in Marker
+- 24112021.14. Using Comp. in Marker (Animated Marker)
 - 24112021.15. Show User Location
-
 ```kotlin
+// in AndroidManifest (/android/app/src/main/AndroidManifest.xml)
 <uses-permission android:name="android.permission.ACCESS_COURSE_LOCATION"/>
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 ```
-
 - 24112021.16. Permisson for Android
 - 24112021.17. Get Current Location
