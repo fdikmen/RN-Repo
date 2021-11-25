@@ -54,7 +54,9 @@ Contains React Native Course Codes.
 #### LESSON 06
 
 - 031121.01. Create App<br/>
+```javascript
 npx react-native init callApiSample
+```
 - 031121.02. Call API
 - 031121.03. Loading
 - 031121.04. Refresh Call API with Button
@@ -70,13 +72,17 @@ npx react-native init callApiSample
 
 #### LESSON 07
 - 06112021.01. React Navigation<br/>
+```javascript
 npm install @react-navigation/native<br/>
 npm install react-native-screens react-native-safe-area-context<br/>
+```
 ###### if using IOS; npx pod-install ios<br/>
 - 06112021.02. React Navigation & Navigation Types<br/>
 Drawer + Tab + Stack = NESTING
 - 06112021.03. Installing the Native-Stack-Navigator Lib<br/>
+```javascript
 npm install @react-navigation/native-stack
+```
 - 06112021.04. Create a Stack-Navigator
 - 06112021.05. Bug Fixed & Configuring The Navigator
 - 06112021.06. Specifying Options (Options & screenOptions)
@@ -225,8 +231,11 @@ playServicesVersion = "18.0.0"
 - 24112021.13.  Using View in Marker
 - 24112021.14.  Using Comp. in Marker (Animated Marker)
 - 24112021.15. Show User Location
+
+```kotlin
 <uses-permission android:name="android.permission.ACCESS_COURSE_LOCATION"/>
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+```
 
 - 24112021.16. Permisson for Android
 - 24112021.17. Get Current Location
