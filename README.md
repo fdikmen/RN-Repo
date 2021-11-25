@@ -53,7 +53,7 @@ Contains React Native Course Codes.
 
 #### LESSON 06
 
-- 031121.01. Create App<br/>
+- 031121.01. Create App
 ```javascript
 npx react-native init callApiSample
 ```
@@ -71,7 +71,7 @@ npx react-native init callApiSample
 - 031121.13. Pull to Refresh (onRefresh Refreshing)
 
 #### LESSON 07
-- 06112021.01. React Navigation<br/>
+- 06112021.01. React Navigation<
 ```javascript
 npm install @react-navigation/native<br/>
 npm install react-native-screens react-native-safe-area-context<br/>
@@ -149,7 +149,6 @@ headerBackTitleStyle headerBackImageSource / headerLeft
 
 
 #### LESSON 12
-
 - 14112021.01. Summary
 - 14112021.02. Animated Configuration & Animated Methods<br/>
 Animated.timing()  Animated.decay() Animated.spring()<br/>
@@ -161,7 +160,6 @@ Animated.parallel() Animated.sequence() Animated.stagger()
 - 14112021.06. Interpolate
 
 #### Lesson 13
-
 - 18112021.01. Summary
 - 18112021.02. Spring Method
 - 18112021.03. Spring Method (Codes)
@@ -172,7 +170,6 @@ Animated.parallel() Animated.sequence() Animated.stagger()
 - 18112021.08. LayoutAnimation API
 
 #### LESSON 14
-
 - 19112021.01. LayoutAnimation API
 - 19112021.02. First App - LayoutAnimation Sample01
 - 19112021.03. LayoutAnimation Methods
@@ -203,7 +200,7 @@ static create(duration, type, creationProp)
 #### LESSON 16
 - 24112021.01. Installation and Initial Example
 - 24112021.02. Google API Key<br/>
-[Open Console] (http://console.cloud.google.com) 
+[Open Console](http://console.cloud.google.com) 
 - 24112021.03. Open Google Services on Genymotion
 - 24112021.04. Configuration for IOS
 // in AppDelegate.m (/ios/[ProjectName]/AppDelegate.m)
@@ -212,6 +209,7 @@ static create(duration, type, creationProp)
 //in didFinishLaunchingWithOptions Function
 [GMSServices provideAPIKey:@"YOUR_API_KEY"];
 ```
+
 ```swift
 // in Podfile (/ios/Podfile)
 # React Native Maps dependencies
@@ -219,12 +217,13 @@ rn_maps_path = '../node_modules/react-native-maps'
 pod 'react-native-google-maps', :path => rn_maps_path
 pod 'GoogleMaps'
 pod 'Google-Maps-iOS-Utils'
-```swift
+```
 - 24112021.05. Configuration for Android
 ```kotlin
 // in build.gradle (/android/build.gradle)
 playServicesVersion = "18.0.0"
 ```
+
 ```kotlin
 // in AndroidManifest (/android/app/src/main/AndroidManifest.xml)
 ...
